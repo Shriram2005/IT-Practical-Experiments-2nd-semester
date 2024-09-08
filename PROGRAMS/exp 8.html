@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Larger Number</title>
+    <script>
+        function displayLargerNumber() {
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            
+            var largerNumber;
+            
+            if (num1 > num2) {
+                largerNumber = num1;
+            } else if (num2 > num1) {
+                largerNumber = num2;
+            } else {
+                largerNumber = 'Both numbers are equal.';
+            }
+            
+            document.getElementById('output').textContent = 'The larger number is: ' + largerNumber;
+        }
+    </script>
+</head>
+<body>
+    <h1>Display Larger Number</h1>
+    <label for="num1">First Number:</label>
+    <input type="number" id="num1"><br>
+    <label for="num2">Second Number:</label>
+    <input type="number" id="num2"><br>
+    <button onclick="displayLargerNumber()">Find Larger Number</button>
+    <p id="output"></p>
+</body>
+</html>
